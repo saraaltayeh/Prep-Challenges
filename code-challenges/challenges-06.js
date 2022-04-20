@@ -19,7 +19,6 @@ const findMax = (arr)=>{
         if (arr[i] > max){
         max += arr[i]
         }
-        // max = Math.max(arr[i]);
     };
     return max;
 }
