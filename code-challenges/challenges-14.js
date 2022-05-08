@@ -68,23 +68,19 @@ const LastWord_2 = (str) => {
 //
 
 const replaceWords = (str) => {
-    let newStr = str.slice(0);
-    let arr = newStr.split("");
-    if(arr.indexOf("I"))
-    arr.splice("I",1,"We");
+    let newStr = str.split(" ");
+    let i = newStr.indexOf("I")
+    newStr.splice(i,1,"We");
+    
+    let was = newStr.indexOf("was")
+    newStr.splice(was,1,"were");
+    
+    let am =newStr.indexOf("am")
+    newStr.splice(am,1,"are");
 
-    else if(arr.indexOf("was"))
-    arr.splice("was",1,"were");
-
-    else if(arr.indexOf("I was"))
-    arr.splice("I was",1,"We were");
-
-
-    else if(arr.indexOf("am"))
-    arr.splice("am",1,"are");
-
-    return arr.join("");
-
+    let lastStr = str.slice(-1);
+    let result = newStr + lastStr;
+return result.join(" ");
 }
 // -------------------------------------------------------------------------------------------------------
 

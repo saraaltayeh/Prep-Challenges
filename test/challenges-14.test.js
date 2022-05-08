@@ -38,7 +38,7 @@ describe("Challenge14-02", () => {
 });
 
 describe("Challenge14-03", () => {
-  test("replace_The_Words", () => {
+  test.skip("replace_The_Words", () => {
     let test1 = "I thought you had a plan";
     let res1 = "We thought you had a plan";
 
