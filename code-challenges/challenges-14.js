@@ -25,11 +25,11 @@
 
 const LastWord = (str) => {
     let index = 0;
-    if (str.lastIndexOf(" ") !== -1){
+    if (str.lastIndexOf(" ") !== -1) {
         index = str.lastIndexOf(" ") + 1;
     }
-    let result = str.slice(index,str.legth);
-    
+    let result = str.slice(index, str.legth);
+
     return result;
 }
 // -------------------------------------------------------------------------------------------------------
@@ -69,19 +69,22 @@ const LastWord_2 = (str) => {
 
 const replaceWords = (str) => {
     let newStr = str.split(" ");
-    let i = newStr.indexOf("I")
-    newStr.splice(i,1,"We");
-    
-    let was = newStr.indexOf("was")
-    newStr.splice(was,1,"were");
-    
-    let am =newStr.indexOf("am")
-    newStr.splice(am,1,"are");
+    for (let i = 0; i < newStr.legth; i++) {
 
-    let lastStr = str.slice(-1);
-    let result = newStr + lastStr;
-return result.join(" ");
+        if (newStr[i] == "am") {
+            newStr.splice(i, 1, "are")
+        }
+        if (newStr[i] == "was") {
+            newStr.splice(i, 1, "were")
+        }
+        if (newStr[i] == "I") {
+            newStr.splice(i, 1, "We")
+        }
+    }
+    console.log(newStr);
+    return newStr.join(" ");
 }
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -122,4 +125,10 @@ const letterCounter = (str) => {
 // -------------------------------------------------------------------------------------------------------
 
 
-module.exports = { LastWord, LastWord_2, replaceWords, arrToStr, letterCounter };
+module.exports = {
+    LastWord,
+    LastWord_2,
+    replaceWords,
+    arrToStr,
+    letterCounter
+};
