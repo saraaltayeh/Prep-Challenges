@@ -81,7 +81,6 @@ const replaceWords = (str) => {
             newStr.splice(i, 1, "We")
         }
     }
-    console.log(newStr);
     return newStr.join(" ");
 }
 
