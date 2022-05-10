@@ -13,7 +13,7 @@
 // Output => "olleH";
 
 const reverseString = (string) => {
-    //write your code here ...
+return string.split("").reverse().join("");
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -29,7 +29,13 @@ const reverseString = (string) => {
 // Input <= ["hello ^_^ ","Hi ^_^" ,"What's up ^_-" ,"lol"] , Output => ["hello ^_^ ","Hi ^_^" ] ;
 
 const detectFace = (arr) => {
-    //write your code here ...
+    let result = [];
+    arr.forEach(element => {
+        if (element.indexOf("^_^") !== -1) {
+            result.push(element);
+        }
+    });
+    return result;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -69,4 +75,9 @@ const chickenGradients = (arr) => {
 }
 // -------------------------------------------------------------------------------------------------------
 
-module.exports = { reverseString, detectFace, eveCharacter, chickenGradients };
+module.exports = {
+    reverseString,
+    detectFace,
+    eveCharacter,
+    chickenGradients
+};
