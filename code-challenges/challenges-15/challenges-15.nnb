@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "let arr2 = {};\n    let max = 1;\n    \n    arr.forEach(element =>\n    arr2[element]? arr2[element]++: (arr2[element]=1)\n    )\n    arr.forEach(element => {\n        if (arr2[element] > max){\n            max = arr2[element];\n    \n        }\n    })\n    return arr.length - max;\n    "
             ],
             "outputs": []
         },
