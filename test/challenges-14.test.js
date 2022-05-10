@@ -38,12 +38,12 @@ describe("Challenge14-02", () => {
 });
 
 describe("Challenge14-03", () => {
-  test.skip("replace_The_Words", () => {
+  test("replace_The_Words", () => {
     let test1 = "I thought you had a plan";
     let res1 = "We thought you had a plan";
 
-    let test2 = "I was there 3000 years ago";
-    let res2 = "We were there 3000 years ago";
+    let test2 = "was there 3000 years ago";
+    let res2 = "were there 3000 years ago";
 
     let test3 = "I am Venom";
     let res3 = "We are Venom";
