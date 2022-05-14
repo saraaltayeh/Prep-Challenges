@@ -4,7 +4,7 @@ const {
   targetIndex,
 } = require("../code-challenges/challenges-18");
 
-describe("Challenge18-01", () => {
+describe.skip("Challenge18-01", () => {
   test("Get-Word-Length", () => {
     let test1 = "You can't handle the truth!"
     let test2 = "You're gonna need a bigger boat"
@@ -14,7 +14,7 @@ describe("Challenge18-01", () => {
   });
 });
 
-describe("Challenge18-02", () => {
+describe.skip("Challenge18-02", () => {
   test("Check-Words-Letters", () => {
     expect(wordLetters("dad", "add")).toStrictEqual(true);
     expect(wordLetters("dad", "aadd")).toStrictEqual(false);
@@ -23,7 +23,7 @@ describe("Challenge18-02", () => {
   });
 });
 
-describe("Challenge18-03", () => {
+describe.skip("Challenge18-03", () => {
   test.skip("Find-Target-Index", () => {
     expect(targetIndex([1, 3, 5, 6], 5)).toStrictEqual(2);
     expect(targetIndex([1, 3, 5, 6], 2)).toStrictEqual(1);
