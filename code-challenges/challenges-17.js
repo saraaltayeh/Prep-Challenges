@@ -16,24 +16,19 @@
 
 const recursionPattern = (int1, int2) => {
     let arr =[];
-    // let min =0;
-    for(let i=0; i > int1.length ; i--){
-        
-if (int1[i] - int2 > -4){
-    console.log(int1);
-    let result = int1[i];
-     arr.push(int1[i])
-
-     return result;
+    let result = int1 - int2;
+    arr.push(int1);
+    arr.push(result);
+    while (result >= 0){
+    result = result - int2;
+    arr.push(result);
+    }
+    while (result != int1){
+result = result + int2;
+arr.push(result)
+    }
+    return arr;
 }
-}
-}
-//     let firstNum =  int1.split("");
-//     let scdNum = int2.split("");
-//      if(int1 - int2 > -4){
-//         let result = int1++ ;    
-// arr.push(result);
-//     console.log(int1 - int2);
     
 // -------------------------------------------------------------------------------------------------------
 
@@ -52,8 +47,9 @@ if (int1[i] - int2 > -4){
 // 
 
 const filterLinks = (str) => {
-    // write your code here
-}
+  return str.substring(str.indexOf("www"), str.indexOf(">")-1)
+};
+// extractContent("<a href='http://www.something.org'></a>")
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -71,8 +67,11 @@ const filterLinks = (str) => {
 //
 
 const isPalindrome = (str) => {
-    // write your code here
+    var lowReg = str.toLowerCase().replace(/[^0-9a-z]/gi, '');
+    var reverseStr = lowReg.split('').reverse().join(''); 
+    return reverseStr === lowReg;
 }
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
