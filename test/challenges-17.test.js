@@ -5,7 +5,9 @@ const {
     samePattern,
 } = require("../code-challenges/challenges-17");
 
+
 describe("Challenge17-01", () => {
+
   test("Recursion-Pattern", () => {
     let Output1 = [16, 11, 6, 1, -4, 1, 6, 11, 16];
     let Output2 = [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50];
@@ -14,6 +16,7 @@ describe("Challenge17-01", () => {
     expect(recursionPattern(50, 9)).toStrictEqual(Output2);
   });
 });
+
 
 describe("Challenge17-02", () => {
   let test1 =
@@ -30,7 +33,9 @@ describe("Challenge17-02", () => {
   });
 });
 
+
 describe("Challenge17-03", () => {
+
   let test1 = "A man, a plan, a canal: Panama";
   let test2 = "race a car";
   let test3 = " ";
